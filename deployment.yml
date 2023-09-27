@@ -1,21 +1,38 @@
 apiVersion: apps/v1
+# Especifica a versão da API do Kubernetes
+
 kind: Deployment
+# Define o tipo de recurso como Deployment, para gerir réplicas do aplicativo
+
 metadata:
   name: nodeapp-deployment
   labels:
     app: nodeapp
+    # Define metadados para o recurso, incluindo nome e rótulos (labels) para identificação
+
 spec:
   replicas: 1
+  # Especifica o número desejado de réplicas do aplicativo como 1
+
   selector:
     matchLabels:
       app: nodeapp
+    # Define um seletor para selecionar os Pods gerenciados para este Deployment
+
   template:
     metadata:
       labels:
-        app: nodeapp 
+        app: nodeapp
+      # Define metadados para os Pods gerados, incluindo rótulos para identificação
+
     spec:
       containers:
       - name: nodeserver
+        # Define os contêineres que serão executados nos Pods
+
         image: silima1/nodejs:latest
+        # Define a imagem Docker a ser utilizada para o contêiner
+
         ports:
         - containerPort: 3000
+        # Define a porta que o contêiner expõe para comunicação externa

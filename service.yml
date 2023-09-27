@@ -1,13 +1,30 @@
 apiVersion: v1
+# Especifica a versão da API do Kubernetes
+
 kind: Service
+# Define o tipo de recurso como Service, k permite expor aplicativos para comunicação externa
+
 metadata:
   name: nodeapp-service
+  # Define metadados para o recurso, incluindo o nome do Service
+
 spec:
   selector:
-    app: nodeapp 
+    app: nodeapp
+  # Define um seletor para selecionar os Pods aos quais este Service será direcionado
+
   type: LoadBalancer
+  # Define o tipo de Service como LoadBalancer, que provisiona um balanceador de carga externo
+
   ports:
   - protocol: TCP
+    # Define as configurações da porta a ser exposta pelo Service
+
     port: 5000
+    # Define a porta interna do service
+
     targetPort: 3000
+    # Define a porta do Pod de destino (containers) que receberá o tráfego
+
     nodePort: 31110
+    # Define a porta no nó físico (host) para comunicação externa
