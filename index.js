@@ -11,6 +11,9 @@ var euCapitals = {
     'Spain': 'Madrid',
     'France': 'Paris',
     'Germany': 'Berlin',
+    'Italy': 'Rome',
+    'Belgium': 'Bruxelas',
+
 };
 
 app.get('/europe', function (req, res) {
