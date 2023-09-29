@@ -63,23 +63,23 @@ Projeto ilustrativo de uso de docker e kubernetes na maquina local
 
 # To execute a project that involves Docker and assumes you have a DockerHub account, follow these steps:
 
-# Building your container image:
+# Build your container image:
 1. docker build - t YOUR IMAGE NAME .
-# VISUALIZING YOUR CREATED IMAGE
+# VISUALIZe YOUR CREATED IMAGE
 2. docker images
 # MAPPING PORT TO GET YOUR WEB APPLICATION
 3. docker run -d -p 3000:3000 YOUR IMAGE NAME OR ID
-# VISUALIZING YOUR CONTAINER IMAGE
+# VISUALIZE YOUR CONTAINER IMAGE
 4. docker ps
-# GETTING YOUR WEB APPLICATION ON GENERATED IP
+# GET YOUR WEB APPLICATION ON GENERATED IP
 5. ip addr
-# RUNNING YOUR CONTAINER
+# RUN YOUR CONTAINER
 6. docker run -f YOUR ID CONTAINER
-# OPENING YOUR DOCKERHUB ACCESS your user and password is required
+# OPEN YOUR DOCKERHUB ACCESS your user and password is required
 7. docker login
-# PUSHING APP TO DOCKERHUB PLATAFORM
+# PUSH APP TO DOCKERHUB PLATFORM
 8. docker push YOUR IMAGE NAME: latest
-# VISUALIZE YOUR MINIKUBE IF IS IT RUNNING
+# VIEW YOUR MINIKUBE IF IT IS WORKING
 9. minikube status
 # is not put it running
 10. minijube start
